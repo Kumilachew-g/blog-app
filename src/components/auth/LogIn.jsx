@@ -20,3 +20,10 @@ const Login = () => {
   const [show, setShow] = useState(false);
   const { login, isLoading } = useLogin();
 };
+
+const {
+  register,
+  handleSubmit,
+  reset,
+  formState: { errors },
+} = useForm();
