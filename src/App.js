@@ -1,10 +1,13 @@
 import "./App.css";
-
+import React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { RouterProvider } from "react-router";
+import { router } from "./config/routes";
 function App() {
   return (
-    <div className="App">
-      <h2>My blog app</h2>
-    </div>
+    <ChakraProvider>
+      <RouterProvider router={router} />
+    </ChakraProvider>
   );
 }
 
