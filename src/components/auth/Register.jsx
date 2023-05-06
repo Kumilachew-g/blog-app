@@ -23,3 +23,12 @@ import {
   emailValidate,
 } from "../../validations/formValidation";
 import { useRegister } from "../../hooks/auths";
+
+export function handleRegister(data) {
+  signup({
+    username: data.username,
+    email: data.email,
+    password: data.password,
+    redirectTo: ROOT,
+  });
+}
