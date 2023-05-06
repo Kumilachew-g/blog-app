@@ -36,3 +36,14 @@ export const passwordValidate = {
       "Password must contain at least 1 uppercase, 1 lowercase and 1 number",
   },
 };
+
+export const emailValidate = {
+  required: {
+    value: true,
+    message: "Email is required",
+  },
+  pattern: {
+    value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+    message: "Email is invalid",
+  },
+};
