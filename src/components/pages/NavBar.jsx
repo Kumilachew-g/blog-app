@@ -19,3 +19,4 @@ import {
   ModalFooter,
   Tooltip,
 } from "@chakra-ui/react";
+import { Icon } from "@chakra-ui/react";
