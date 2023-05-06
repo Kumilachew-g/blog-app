@@ -33,3 +33,4 @@ import { RiLogoutCircleLine } from "react-icons/ri";
 
 import { LOGIN, REGISTER, ROOT } from "../../config/routes";
 import { useLogout } from "../../hooks/auths";
+import { useAuth } from "../../hooks/auths";
