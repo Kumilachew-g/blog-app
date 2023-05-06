@@ -23,12 +23,22 @@ import {
   emailValidate,
 } from "../../validations/formValidation";
 import { useRegister } from "../../hooks/auths";
+import { async } from "q";
 
-export function handleRegister(data) {
-  signup({
-    username: data.username,
-    email: data.email,
-    password: data.password,
-    redirectTo: ROOT,
-  });
+export default function Register() {
+  const { register: signup, isLoading } = useRegister();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  async function handleRegister(data) {
+    signup({
+      username: data.username,
+      email: data.email,
+      password: data.password,
+      redirectTo: ROOT,
+    });
+  }
 }
