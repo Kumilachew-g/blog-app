@@ -22,3 +22,4 @@ import {
   passwordValidate,
   emailValidate,
 } from "../../validations/formValidation";
+import { useRegister } from "../../hooks/auths";
