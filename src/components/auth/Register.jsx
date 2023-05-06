@@ -21,4 +21,4 @@ import {
   usernameValidate,
   passwordValidate,
   emailValidate,
-} from "../../hooks/auths";
+} from "../../validations/formValidation";
