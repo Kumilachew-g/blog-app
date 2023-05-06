@@ -19,6 +19,13 @@ import {
   ModalFooter,
   Tooltip,
 } from "@chakra-ui/react";
+import {
+  HamburgerIcon,
+  CloseIcon,
+  AddIcon,
+  MoonIcon,
+  SunIcon,
+} from "@chakra-ui/icons";
 import { Icon } from "@chakra-ui/react";
 import { Link as routerLink } from "react-router-dom";
 import { ModalBody } from "react-bootstrap";
