@@ -17,3 +17,8 @@ import {
 import { Link as routerLink } from "react-router-dom";
 import { LOGIN, ROOT } from "../../config/routes";
 import { useForm } from "react-hook-form";
+import {
+  usernameValidate,
+  passwordValidate,
+  emailValidate,
+} from "../../hooks/auths";
