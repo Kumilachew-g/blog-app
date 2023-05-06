@@ -15,3 +15,4 @@ import {
   Tooltip,
 } from "@chakra-ui/react";
 import { Link as routerLink } from "react-router-dom";
+import { LOGIN, ROOT } from "../../config/routes";
