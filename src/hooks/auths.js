@@ -8,8 +8,8 @@ import {
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 import { LOGIN, ROOT } from "../config/routes";
-
 import { auth, db } from "../config/firebase";
+import isUsernameExists from "../utils/isUsernameExists";
 
 // Fetch user data functionalities
 export function useAuth() {
@@ -67,6 +67,89 @@ export function useLogin() {
     } finally {
       setLoading(false);
     }
-    return { login, isLoading };
   }
+  return { login, isLoading };
+}
+
+//  logout functionalities
+export function useLogout() {
+  const [signOut, isLoading, error] = useSignOut(auth);
+  const toast = useToast();
+  const navigate = useNavigate();
+
+  async function logout() {
+    if (await signOut()) {
+      toast({
+        title: "You are logged out",
+        status: "success",
+        isClosable: true,
+        position: "top",
+        duration: 5000,
+      });
+      navigate(LOGIN); // Redirect to login page
+    }
+  }
+  return { logout, isLoading };
+}
+
+// Register functionalities
+export function useRegister() {
+  const [isLoading, setLoading] = useState(false);
+  const toast = useToast();
+  const navigate = useNavigate();
+
+  async function register({
+    email,
+    password,
+    username,
+    redirectTo = DASHBOARD,
+  }) {
+    setLoading(true);
+    const usernameExists = await isUsernameExists(username);
+
+    if (usernameExists) {
+      toast({
+        title: "Username already exists",
+        status: "error",
+        isClosable: true,
+        position: "top",
+        duration: 5000,
+      });
+      setLoading(false);
+    } else {
+      try {
+        const res = await createUserWithEmailAndPassword(auth, email, password);
+        await setDoc(doc(db, "users", res.user.uid), {
+          id: res.user.uid,
+          username: username.toLowerCase(),
+          avatar: `https://avatars.dicebear.com/api/avataaars/${username}.svg`,
+          date: Date.now(),
+        });
+
+        toast({
+          title: "You are registered",
+          description: "You can login now",
+          status: "success",
+          isClosable: true,
+          position: "top",
+          duration: 5000,
+        });
+
+        navigate(redirectTo);
+      } catch (error) {
+        toast({
+          title: "Registration failed",
+          description: error.message,
+          status: "error",
+          isClosable: true,
+          position: "top",
+          duration: 5000,
+        });
+        setLoading(false);
+      } finally {
+        setLoading(false);
+      }
+    }
+  }
+  return { register, isLoading };
 }
