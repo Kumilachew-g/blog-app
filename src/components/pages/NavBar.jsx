@@ -21,3 +21,4 @@ import {
 } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
 import { Link as routerLink } from "react-router-dom";
+import { ModalBody } from "react-bootstrap";
