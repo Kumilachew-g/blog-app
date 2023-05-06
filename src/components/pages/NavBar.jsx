@@ -30,3 +30,5 @@ import { Icon } from "@chakra-ui/react";
 import { Link as routerLink } from "react-router-dom";
 import { ModalBody } from "react-bootstrap";
 import { RiLogoutCircleLine } from "react-icons/ri";
+
+import { LOGIN, REGISTER, ROOT } from "../../config/routes";
