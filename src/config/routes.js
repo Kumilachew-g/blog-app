@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../components/auth/LogIn";
 import Register from "../components/auth/Register";
-import Home from "../components/layout";
+import Home from "../components/pages";
 import { CurrentPost } from "../components/layout/CurrentPost";
 
 export const ROOT = "/";
