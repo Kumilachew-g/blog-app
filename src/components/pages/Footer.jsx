@@ -24,6 +24,26 @@ export default function Footer() {
         align={{ base: "center", md: "center" }}
       >
         <Text>© 2023 Kumilachew Getie.</Text>
+        <Stack direction={"row"} spacing={6}>
+          <chakra.button
+            bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+            rounded={"full"}
+            w={8}
+            h={8}
+            cursor={"pointer"}
+            as={"a"}
+            href={"https://github.com/Kumilachew-g"}
+            display={"inline-flex"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            transition={"background 0.3s ease"}
+            _hover={{
+              bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+            }}
+          >
+            <FaGithub />
+          </chakra.button>
+        </Stack>
       </Container>
     </Box>
   );
