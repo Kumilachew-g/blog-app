@@ -22,7 +22,9 @@ export default function Footer() {
         spacing={4}
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
-      ></Container>
+      >
+        <Text>© 2023 Kumilachew Getie.</Text>
+      </Container>
     </Box>
   );
 }
