@@ -12,3 +12,4 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { Link as routerLink, useParams } from "react-router-dom";
