@@ -14,3 +14,4 @@ import { motion, LayoutGroup } from "framer-motion";
 import React from "react";
 import { usePosts } from "../../hooks/posts";
 import SinglePost from "../posts/SinglePost";
+import { useUser } from "../../hooks/user";
