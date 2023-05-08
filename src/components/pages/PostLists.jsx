@@ -10,3 +10,4 @@ import {
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
+import { motion, LayoutGroup } from "framer-motion";
