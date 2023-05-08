@@ -15,3 +15,5 @@ import React from "react";
 import { usePosts } from "../../hooks/posts";
 import SinglePost from "../posts/SinglePost";
 import { useUser } from "../../hooks/user";
+
+export default function PostLists() {}
