@@ -18,3 +18,5 @@ import { doc, onSnapshot } from "firebase/firestore";
 import { AiOutlineRollback } from "react-icons/ai";
 import { ROOT } from "../../config/routes";
 import NavBar from "./NavBar";
+
+export default function CurrentPost() {}
