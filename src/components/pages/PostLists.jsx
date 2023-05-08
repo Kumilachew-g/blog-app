@@ -12,3 +12,4 @@ import {
 } from "@chakra-ui/react";
 import { motion, LayoutGroup } from "framer-motion";
 import React from "react";
+import { usePosts } from "../../hooks/posts";
