@@ -95,3 +95,5 @@ const SinglePost = ({ post }) => {
     </>
   );
 };
+
+export default SinglePost;
