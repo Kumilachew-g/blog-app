@@ -14,3 +14,4 @@ import {
   FormHelperText,
   useToast,
 } from "@chakra-ui/react";
+import TextareaAutosize from "react-textarea-autosize";
