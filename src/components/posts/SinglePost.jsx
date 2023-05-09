@@ -14,3 +14,4 @@ import { AiTwotoneHeart, AiOutlineHeart, AiFillDelete } from "react-icons/ai";
 import { Link as routerLink } from "react-router-dom";
 import { useAuth } from "../../hooks/auths";
 import { useDeletePost, useToggleLike } from "../../hooks/posts";
+import { useUser } from "../../hooks/user";
