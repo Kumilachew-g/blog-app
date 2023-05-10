@@ -98,12 +98,7 @@ export function useRegister() {
   const toast = useToast();
   const navigate = useNavigate();
 
-  async function register({
-    email,
-    password,
-    username,
-    redirectTo = DASHBOARD,
-  }) {
+  async function register({ email, password, username, redirectTo = ROOT }) {
     setLoading(true);
     const usernameExists = await isUsernameExists(username);
 
