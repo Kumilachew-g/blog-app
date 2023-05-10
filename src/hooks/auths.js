@@ -9,7 +9,7 @@ import {
 } from "firebase/auth";
 import { LOGIN, ROOT } from "../config/routes";
 import { auth, db } from "../config/firebase";
-import isUsernameExists from "../validations/isUsernameExists";
+import { isUsernameExists } from "../validations/isUsernameExists";
 
 // Fetch user data functionalities
 export function useAuth() {
