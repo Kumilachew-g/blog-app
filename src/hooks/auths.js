@@ -9,7 +9,7 @@ import {
 } from "firebase/auth";
 import { LOGIN, ROOT } from "../config/routes";
 import { auth, db } from "../config/firebase";
-import isUsernameExists from "../validations/isUsernameExists";
+import { isUsernameExists } from "../validations/isUsernameExists";
 
 // Fetch user data functionalities
 export function useAuth() {
@@ -98,12 +98,7 @@ export function useRegister() {
   const toast = useToast();
   const navigate = useNavigate();
 
-  async function register({
-    email,
-    password,
-    username,
-    redirectTo = DASHBOARD,
-  }) {
+  async function register({ email, password, username, redirectTo = ROOT }) {
     setLoading(true);
     const usernameExists = await isUsernameExists(username);
 

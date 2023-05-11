@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../components/auth/LogIn";
 import Register from "../components/auth/Register";
 import Home from "../components/pages";
-import { CurrentPost } from "../components/layout/CurrentPost";
+import CurrentPost from "../components/pages/CurrentPost";
 
 export const ROOT = "/";
 export const LOGIN = "/login";

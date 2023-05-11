@@ -34,6 +34,7 @@ import { RiLogoutCircleLine } from "react-icons/ri";
 import { LOGIN, REGISTER, ROOT } from "../../config/routes";
 import { useLogout } from "../../hooks/auths";
 import { useAuth } from "../../hooks/auths";
+import NewPost from "../posts/NewPost";
 
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -157,7 +158,7 @@ export default function Navbar() {
               <ModalContent>
                 <ModalCloseButton />
                 <ModalBody pb={12}>
-                  <Newpost onModalClose={onModalClose} />
+                  <NewPost onModalClose={onModalClose} />
                 </ModalBody>
               </ModalContent>
             </Modal>
