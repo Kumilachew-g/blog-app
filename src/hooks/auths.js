@@ -28,7 +28,7 @@ export function useAuth() {
 
     if (!authLoading) {
       if (authUser) fetchData();
-      else setLoading(false); // Not signed in
+      else setLoading(false); // If user is not logged in
     }
   }, [authLoading]);
 
