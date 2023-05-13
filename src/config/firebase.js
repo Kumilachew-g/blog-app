@@ -8,9 +8,9 @@ import { apiKey } from "../../keys";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: apiKey,
-  authDomain: "react-blog-b4ada.firebaseapp.com",
-  projectId: "react-blog-b4ada",
-  storageBucket: "react-blog-b4ada.appspot.com",
+  authDomain: "blog-app-97c0e.firebaseapp.com",
+  projectId: "blog-app-97c0e",
+  storageBucket: "blog-app-97c0e.appspot.com",
   messagingSenderId: "570365255686",
   appId: "1:570365255686:web:f32cfca9d6dd120dfba387",
 };
