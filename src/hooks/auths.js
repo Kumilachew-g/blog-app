@@ -11,7 +11,7 @@ import { LOGIN, ROOT } from "../config/routes";
 import { auth, db } from "../config/firebase";
 import { isUsernameExists } from "../validations/isUsernameExists";
 
-// Fetch user data functionalities
+// Fetch user data functionalities and check if user is logged in
 export function useAuth() {
   const [authUser, authLoading, error] = useAuthState(auth);
   const [isLoading, setLoading] = useState(true);
